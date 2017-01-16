@@ -1,0 +1,71 @@
+.fin-companies-img {
+  position: relative;
+
+  #pulse-dot {
+    //background-color: #3ca04f;
+    //border: 2px solid #3ca04f;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 46%;
+    left: 20%;
+
+
+
+    .pulse {
+      width: 10px;
+      height: 10px;
+      border: 2px solid #44b757;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background-color: #44b757;
+      z-index: 10;
+      position: absolute;
+      animation: scale_point 1.2s infinite running alternate;
+    }
+
+    .dot {
+      border: 10px solid #48c65c;
+      background: transparent;
+      border-radius: 60px;
+      height: 50px;
+      width: 50px;
+      animation: pulse 2.5s ease-out;
+      animation-iteration-count: infinite;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      z-index: 1;
+      opacity: 0;
+    }
+  }
+}
+
+
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+  }
+  25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+  }
+  50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+  }
+}
+
+@keyframes moveBorder{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(3.3)}}
+@keyframes scale_point{from{transform:scale(1)}to{transform:scale(1.4)}}
