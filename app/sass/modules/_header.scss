@@ -177,11 +177,17 @@ header {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  //background: url(../img/head-block.jpg) no-repeat 50%;
+  background: url(../img/video-sub-bg.png) no-repeat 50%;
   background-size: cover;
+
+  @media (min-width: 991px) {
+    background: none;
+  }
 
   .bgvideo {
     position: absolute;
+    background: url(../img/video-sub-bg.png) no-repeat 50%;
+    background-size: cover;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -190,6 +196,10 @@ header {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
+
+    @media (max-width: 990px) {
+      display: none;
+    }
   }
 
   .wrap {

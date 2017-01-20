@@ -637,6 +637,19 @@
         @include fontSize(11px);
         font-weight: 300;
       }
+
+    }
+    .capital {
+      @media (max-width: 500px) {
+        width: 70%!important;
+        padding-right: 10px;
+      }
+    }
+
+    .row {
+      @media (max-width: 500px) {
+        padding: 10px 15px;
+      }
     }
   }
 }

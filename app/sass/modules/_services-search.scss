@@ -177,14 +177,28 @@
   justify-content: center;
   padding: 30px 15px;
   min-height: 300px;
+  border: 1px solid #e1e3e6;
 
   p {
     color: #424242;
     @include fontSize(13px);
     font-weight: 400;
     line-height: 22px;
-    max-width: 650px;
+    max-width: 690px;
     margin: 0 auto;
+    text-align: justify;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 76px;
+      background-color: #3ca04f;
+      opacity: 0.5;
+      left: -34px;
+      top: 6px
+    }
   }
 }
 
@@ -356,7 +370,7 @@
     text-transform: uppercase;
     color: #424242;
     font-family: $georgia-font;
-    @include fontSize(45px);
+    @include fontSize(36px);
     font-weight: 400;
     line-height: 48px;
     padding-bottom: 70px;

@@ -1,6 +1,4 @@
-$(function() {
-    new WOW().init();
-
+$( document ).ready(function() {
     //Slimmenu
     $('header .menu').slimmenu({
         resizeWidth: '800', /* Navigation menu will be collapsed when document width is below this size or equal to it. */
@@ -13,6 +11,8 @@ $(function() {
         expandIcon: '<i>&#9660;</i>', /* An icon to be displayed next to parent menu of collapsed sub menus. */
         collapseIcon: '<i>&#9650;</i>' /* An icon to be displayed next to parent menu of expanded sub menus. */
     });
+
+    new WOW().init();
 
     $('.carousel-1').owlCarousel({
         loop:true,
@@ -104,22 +104,7 @@ $(function() {
         }
     });
 
-    //In view
-    function come(elem) {
-        var docViewTop = $(window).scrollTop(),
-            docViewBottom = docViewTop + $(window).height(),
-            elemTop = $(elem).offset().top,
-            elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
-    $(window).scroll(function(){
-        if (come(".rotate-wrap")) {
-            $(".our-work").addClass("animate")
-        }
-    });
-
     //Magnific popUp
     $('.popUp-btn').magnificPopup();
 });
+
