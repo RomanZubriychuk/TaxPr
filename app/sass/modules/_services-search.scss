@@ -200,6 +200,17 @@
       top: 6px
     }
   }
+
+  &.offer {
+    min-height: 260px;
+    margin-top: 100px;
+    margin-bottom: 0;
+
+    p:before {
+      height: 40px;
+      top: 4px;
+    }
+  }
 }
 
 .search-online-list {
